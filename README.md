@@ -1,4 +1,4 @@
-# How to create an ESLint plugin with Jest and ES Modules
+## How to create an ESLint plugin with Jest and ES Modules
 
 To create ESLint plugins, you'll need to understand how to parse JavaScript code and how ESLint's architecture allows for plugins. The key components you'll need to grasp are:
 
@@ -156,7 +156,8 @@ ruleTester.run("my-rule", rule, {
 });
 ```
 
-> **&#9432; Note:** We need to specify the `ecmaVersion` in `parserOptions` because the `RuleTester` does not read the `parserOptions` from the ESLint configuration.
+> [!IMPORTANT]
+> We need to specify the `ecmaVersion` in `parserOptions` because the `RuleTester` does not read the `parserOptions` from the ESLint configuration.
 > [See the documentation for more details. &#128279;](https://eslint.org/docs/latest/extend/custom-rule-tutorial#step-6-write-the-test)
 
 Modify your `package.json` file's scripts to run your tests:
@@ -171,7 +172,9 @@ Modify your `package.json` file's scripts to run your tests:
 }
 ```
 
-> **&#9432; Note:** The current version of Jest as of this writing (29.7.0) does not support ES modules out of the box. [See the documentation for more details. &#128279;](https://jestjs.io/docs/ecmascript-modules)
+> [!NOTE]
+> The current version of Jest as of this writing (29.7.0) does not support ES modules out of the box. Hence why we need to add the `--experimental-vm-modules` via Node.
+> [See the documentation for more details. &#128279;](https://jestjs.io/docs/ecmascript-modules)
 
 Run your tests to ensure your rule works correctly:
 
