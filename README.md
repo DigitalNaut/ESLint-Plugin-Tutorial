@@ -182,6 +182,10 @@ Run your tests to ensure your rule works correctly:
 npm test
 ```
 
+## Try it yourself
+
+You can inspect the code above in a real project by forking this repo and running it locally.
+
 ## Disclaimer
 
 The base tutorial was created with the [Universal Primer](https://chatgpt.com/g/g-GbLbctpPz-universal-primer) plugin by Siqi Chen for ChatGPT v4o, but was manually edited for accuracy and specificity for Jest and ES Modules. Additional assistance was provided by Codeium for clarity and autocompletion.
