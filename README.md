@@ -157,7 +157,7 @@ ruleTester.run("my-rule", rule, {
 ```
 
 > [!IMPORTANT]
-> We need to specify the `ecmaVersion` in `parserOptions` because the `RuleTester` does not read the `parserOptions` from the ESLint configuration.
+> We need to specify the `parserOptions.ecmaVersion` for the `RuleTester` separately as it does not read the `parserOptions` from the ESLint configuration.
 > [See the documentation for more details. &#128279;](https://eslint.org/docs/latest/extend/custom-rule-tutorial#step-6-write-the-test)
 
 Modify your `package.json` file's scripts to run your tests:
@@ -166,8 +166,8 @@ Modify your `package.json` file's scripts to run your tests:
 {
   // ...
   "scripts": {
-    "test": "`node --experimental-vm-modules node_modules/jest/bin/jest.js`"
-  }
+    "test": "`node --experimental-vm-modules node_modules/jest/bin/jest.js`",
+  },
   // ...
 }
 ```
