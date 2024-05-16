@@ -162,7 +162,7 @@ ruleTester.run("my-rule", rule, {
 
 Modify your `package.json` file's scripts to run your tests:
 
-```json
+```jsonc
 {
   // ...
   "scripts": {
